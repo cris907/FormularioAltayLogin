@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC>
+<html  lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tarea_DWEC05 Formulario de alta y login</title>
+    <link rel="stylesheet" type="text/css" href="style/css.css"/>
+    <script type="text/javascript" src="js/validacion.js"></script>
+  </head>
+
+  <body>
+    <!-- Botones -->
+    <div id="botones" >
+      <button id="registro" style="display: none;">Registrar</button>
+      <button id="iniciarSesion" style="display: none;">Iniciar Sesión</button>
+    </div>
+    
+    <!-- Formulario de Iniciar Sesión -->
+    <div class="formulario" style="display: none;" id="contenedor1">
+      <form id="formulario1" action="#">
+        <h1>Iniciar Sesión</h1>
+        <!-- Nombre -->
+        <label for="usuario">Nombre y Apellidos <span>*</span> </label><br/>
+        <input type="text" id="usuario" name="usuario" autofocus>
+        <br/><br/>
+        <!-- Contraseña -->
+        <label for="password1">Contraseña <span>*</span> </label><br/>
+        <input type="password" id="password1" name="password1">
+        <br/><br/>
+        <!-- Botón Enviar -->
+        <input class="boton" type="submit" name="iniciar" id="iniciar" value="Enviar" />
+      </form>
+    </div>
+
+    <!-- Formulario de Registrar -->
+    <div class="formulario" style="display: none;" id="contenedor">
+      <form id="formulario" action="#">
+        <h1>Registro</h1>
+        <!-- Nombre y apellidos Obligatorios -->
+        <label for="nombre">Nombre y Apellidos <span>*</span> </label><br/>
+        <input id="nombre" name="nombre" type="text" value="" autofocus>
+        <span id="error_nombre"></span>
+        <br/><br/>
+        <!-- Correo Electrónico obligatorio -->
+        <label for="email">Email <span>*</span> </label><br/>
+        <input id="email" name="email" type="email" value="">
+        <span id="error_email"></span>
+        <br/><br/>
+        <!-- Constraseña obligatorio -->
+        <label for="password">Contraseña <span>*</span> </label><br/>
+        <input id="password" name="password" class="password" type="password">
+        <span id="error_contraseña"></span>
+        <br/><br/>
+        <!-- Confirmar contraseña obligatorio -->
+        <label for="confPassword">Confirmar contraseña <span>*</span> </label><br/>
+        <input id="confPassword" name="confPassword" type="password">
+        <span id="error_confContraseña"></span>
+        <br/><br/>
+        <!-- Sexo opcional-->
+        <fieldset><legend>Sexo</legend>
+          <input class="radio" type="radio" name="sexo" value="hombre" id="sexo-hombre"/>
+          <label for="sexo-hombre">Hombre</label><br/>
+          <input class="radio" type="radio" name="sexo" value="mujer" id="sexo-mujer"/>
+          <label for="sexo-mujer">Mujer</label>
+        </fieldset>
+        <br/>
+        <!-- Fecha de naciemiento opcional --> 
+          <label for="fecha">Fecha de nacimiento: </label><br/>
+          <input class="fecha" name="fecha" type="date" id="fecha">
+        <br/><br/>
+        <!-- Direccion opcional -->
+        <label for="direccion">Dirección: </label><br/>
+        <input id="direccion" name="direccion" type="text">
+        <span id="error_direccion"></span>
+        <br/><br/>
+        <!-- Pais opcional -->
+        <label for="pais">País: </label><br/>
+        <select name="pais" id="pais">
+          <optgroup>
+              <option value="ES" selected>España</option>
+              <option value="FR">Francia</option>
+              <option value="PO">Portugal</option>
+              <option value="CO">Colombia</option>
+              <option value="EU">EEUU</option>
+          </optgroup>
+        </select>
+        <br><br>
+        <!-- Suscripción revista -->
+        <input id="novedades" class="checkbox" type="checkbox" value="revista" name="novedades" checked />
+        <label for="novedades">Subcripción a la revista digital.</label>
+        <br/>
+        <!-- Condiciones de uso, Aviso de privacidad y Condiciones de Cookies y publicidad en Internet-->
+        <input id="condiciones" class="checkbox" type="checkbox" value="condiciones" name="condiciones" checked />
+        <label for="condiciones">Condiciones de uso, Aviso de privacidad y Condiciones de Cookies y publicidad en Internet. <span>*</span></label>
+        <br/><br/>
+        <!-- Botón Enviar -->
+        <input class="boton" type="submit" name="registrar" id="registrar" value="Enviar" />
+      </form>
+    </div>
+
+    <!-- Bienvenido -->
+    <div id="contenedor2" style="display: none;">
+      <div class="mensaje">
+        <p>Bienvenido, </p>
+        <p id="username"></p>
+      </div>
+      <input class="boton" type="submit" name="cerrarSesion" id="cerrarSesion" value="Cerrar Sesión" />
+    </div>
+  </body>
+</html>

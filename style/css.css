@@ -1,0 +1,82 @@
+html{
+	font-family: arial;
+}
+
+/*MENSAJES SPAN*/
+span{
+	color: red;
+}
+
+/*BOTONES*/
+#botones{
+	display: flex;
+	margin-left: 20px;
+}
+
+button{
+	padding: 8px;
+	margin: 20px;
+	border: 1px solid #176582;
+	border-radius: 6px;    
+	background-color: #aab7d4;
+}
+
+button:hover {
+  background-color: #c5dada;
+  color: white;
+}
+
+.boton{
+	padding: 5px;
+	width: auto;
+	border: 1px solid #1b4c25;
+	border-radius: 5px;
+	background: #4c9671;
+}
+
+.boton:hover{
+	background-color: #8edab4;
+  color: white;
+}
+
+/*FORMULARIOS*/
+.formulario{
+	margin-left: 40px;
+}
+
+h1 {
+	margin-top: auto;
+}
+
+input{
+	width: 300px;
+}
+
+fieldset{
+	width: 200px;
+}
+
+.radio{
+	width: auto;
+}
+
+.checkbox{
+	width: auto;
+}
+
+.fecha{
+	width: auto;
+}
+
+/*BIENVENIDO*/
+#contenedor2{
+	margin-left: 40px;
+}
+
+.mensaje{
+	display: flex;
+}
+
+#username{
+	margin-left: 10px;
+}
